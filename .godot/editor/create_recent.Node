@@ -1,6 +1,14 @@
-Label
-Panel
-CanvasLayer
+Control
 Button
+HBoxContainer
+MarginContainer
+Panel
+RichTextLabel
+Label
+VBoxContainer
+CanvasLayer
+ScrollContainer
+TextureRect
+GridContainer
 Sprite2D
 Timer

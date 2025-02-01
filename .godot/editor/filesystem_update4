@@ -4,3 +4,12 @@ res://level 1/main.gd
 res://singleton/snake_segment.tscn
 res://singleton/game_over_menu.tscn
 res://singleton/game_over_menu.gd
+res://over world/upgrades/upgrade_menu.tscn
+res://over world/upgrades/upgrade_button.tscn
+res://over world/upgrades/game_controller_bar.tscn
+res://over world/level 1/main.tscn
+res://over world/Desert/main.tscn
+res://over world/WurmGame/Desert/main.tscn
+res://over world/ui/hud.tscn
+res://over world/WurmGame/Desert/main.gd
+res://over world/upgrades/upgrade_menu_footer.tscn

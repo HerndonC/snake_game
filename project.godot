@@ -11,14 +11,14 @@ config_version=5
 [application]
 
 config/name="snake_game"
-run/main_scene="res://level 1/main.tscn"
+run/main_scene="res://over world/WurmGame/Desert/main.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
 
 [display]
 
 window/size/viewport_width=1000
-window/size/viewport_height=1050
+window/size/viewport_height=1200
 
 [input]
 

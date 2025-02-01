@@ -1,12 +1,24 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1738364071
+::res://::1738392651
 icon.svg::CompressedTexture2D::7638077810738578269::1738023627::1738130959::1::::<><>::
 README.md::TextFile::-1::1738023191::0::1::::<><>::
 ::res://assets/::1738130960
 apple.png::CompressedTexture2D::8824434516607673997::1738025411::1738130959::1::::<><>::
 bg.png::CompressedTexture2D::3073879992024540412::1738025411::1738130960::1::::<><>::
 MaldiniBold.ttf::FontFile::1256330068851899642::1738025411::1738130959::1::::<><>::
-::res://level 1/::1738131511
-hud.tscn::PackedScene::1422882233071361880::1738131511::0::1::::<><>::
-main.gd::GDScript::-1::1738131150::0::1::::<>Node<>::
-main.tscn::PackedScene::3673892462621341364::1738131345::0::1::::<><>::res://level 1/main.gd<>uid://bj2ambwei5ogi::::res://assets/bg.png
+::res://over world/::1738392640
+::res://over world/ui/::1738392878
+hud.tscn::PackedScene::1422882233071361880::1738392878::0::1::::<><>::uid://r5ttqaxnuvgk::::res://assets/MaldiniBold.ttf
+::res://over world/upgrades/::1738397510
+game_controller_bar.tscn::PackedScene::5681718095112538811::1738392878::0::1::::<><>::uid://dg27a4un4hha0::::res://icon.svg
+upgrade_button.tscn::PackedScene::8922570923122937522::1738397510::0::1::::<><>::uid://dg27a4un4hha0::::res://icon.svg
+upgrade_menu.tscn::PackedScene::225400026014977608::1738397580::0::1::::<><>::
+::res://over world/WurmGame/::1738392640
+::res://over world/WurmGame/Desert/::1738392878
+main.gd::GDScript::-1::1738392875::0::1::::<>Node<>::
+main.tscn::PackedScene::3673892462621341364::1738392878::0::1::::<><>::res://over world/WurmGame/Desert/main.gd<>uid://cwbyjux1cdyr4::::res://singleton/snake_segment.tscn<>uid://bj2ambwei5ogi::::res://assets/bg.png<>uid://ujiwr3vh4tto::::res://over world/ui/hud.tscn<>uid://dxyvfago0gd5f::::res://assets/apple.png<>uid://qft2ftv8xdjm::::res://singleton/game_over_menu.tscn<>uid://cm7jcjmdy4egx::::res://over world/upgrades/game_controller_bar.tscn
+upgrade_menu.tscn::PackedScene::4730600700175694395::1738379337::0::1::::<><>::
+::res://singleton/::1738392878
+game_over_menu.gd::GDScript::-1::1738378855::0::1::::<>CanvasLayer<>::
+game_over_menu.tscn::PackedScene::1134545519243997426::1738392878::0::1::::<><>::res://singleton/game_over_menu.gd<>uid://r5ttqaxnuvgk::::res://assets/MaldiniBold.ttf
+snake_segment.tscn::PackedScene::6320534672330157943::1738392878::0::1::::<><>::
