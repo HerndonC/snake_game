@@ -1,0 +1,6 @@
+res://level 1/hud.tscn
+res://level 1/main.tscn
+res://level 1/main.gd
+res://singleton/snake_segment.tscn
+res://singleton/game_over_menu.tscn
+res://singleton/game_over_menu.gd

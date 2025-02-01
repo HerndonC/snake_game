@@ -1,0 +1,12 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1738364071
+icon.svg::CompressedTexture2D::7638077810738578269::1738023627::1738130959::1::::<><>::
+README.md::TextFile::-1::1738023191::0::1::::<><>::
+::res://assets/::1738130960
+apple.png::CompressedTexture2D::8824434516607673997::1738025411::1738130959::1::::<><>::
+bg.png::CompressedTexture2D::3073879992024540412::1738025411::1738130960::1::::<><>::
+MaldiniBold.ttf::FontFile::1256330068851899642::1738025411::1738130959::1::::<><>::
+::res://level 1/::1738131511
+hud.tscn::PackedScene::1422882233071361880::1738131511::0::1::::<><>::
+main.gd::GDScript::-1::1738131150::0::1::::<>Node<>::
+main.tscn::PackedScene::3673892462621341364::1738131345::0::1::::<><>::res://level 1/main.gd<>uid://bj2ambwei5ogi::::res://assets/bg.png
