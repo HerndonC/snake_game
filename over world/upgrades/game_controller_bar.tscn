@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://cm7jcjmdy4egx"]
+
+[ext_resource type="Texture2D" uid="uid://dg27a4un4hha0" path="res://icon.svg" id="1_gncn5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4o6ui"]
+bg_color = Color(0.105882, 0.552941, 0.870588, 0.0745098)
+
+[node name="GameControllerBar" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1000.0
+offset_bottom = 150.0
+size_flags_horizontal = 4
+
+[node name="Background" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4o6ui")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+custom_minimum_size = Vector2(1000, 100)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 133
+alignment = 1
+
+[node name="Upgrades" type="Button" parent="Control/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("1_gncn5")
+flat = true
+
+[node name="Pause" type="Button" parent="Control/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("1_gncn5")
+flat = true
+
+[node name="Exit" type="Button" parent="Control/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("1_gncn5")
+flat = true

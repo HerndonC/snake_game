@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=3 uid="uid://bslwqb0kf4t6s"]
+
+[ext_resource type="Script" path="res://over world/WurmGame/Desert/Desert.gd" id="1_6hvh8"]
+[ext_resource type="PackedScene" uid="uid://cwbyjux1cdyr4" path="res://singleton/snake_segment.tscn" id="2_rj67y"]
+[ext_resource type="Texture2D" uid="uid://bj2ambwei5ogi" path="res://assets/bg.png" id="3_0ur64"]
+[ext_resource type="PackedScene" uid="uid://ujiwr3vh4tto" path="res://over world/ui/hud.tscn" id="4_a4ylm"]
+[ext_resource type="Texture2D" uid="uid://dxyvfago0gd5f" path="res://assets/apple.png" id="5_bruc1"]
+[ext_resource type="PackedScene" uid="uid://qft2ftv8xdjm" path="res://singleton/game_over_menu.tscn" id="6_53sxa"]
+[ext_resource type="PackedScene" uid="uid://cm7jcjmdy4egx" path="res://over world/upgrades/game_controller_bar.tscn" id="7_mpe1m"]
+
+[node name="Desert" type="Node"]
+script = ExtResource("1_6hvh8")
+snake_scene = ExtResource("2_rj67y")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(500, 550)
+texture = ExtResource("3_0ur64")
+
+[node name="Hud" parent="." instance=ExtResource("4_a4ylm")]
+
+[node name="MoveTimer" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="Food" type="Sprite2D" parent="."]
+texture = ExtResource("5_bruc1")
+offset = Vector2(25, 25)
+
+[node name="GameOverMenu" parent="." instance=ExtResource("6_53sxa")]
+process_mode = 2
+
+[node name="GameControllerBar" parent="." instance=ExtResource("7_mpe1m")]
+offset = Vector2(0, 1050)
+transform = Transform2D(1, 0, 0, 1, 0, 1050)
+
+[connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]
+[connection signal="restart" from="GameOverMenu" to="." method="_on_game_over_menu_restart"]

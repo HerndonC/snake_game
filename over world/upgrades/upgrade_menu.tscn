@@ -1,0 +1,126 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhgknfi100uu"]
+
+[ext_resource type="PackedScene" uid="uid://d0efo7cdsxgc5" path="res://over world/upgrades/upgrade_button.tscn" id="1_7soa5"]
+[ext_resource type="Texture2D" uid="uid://dg27a4un4hha0" path="res://icon.svg" id="2_sfuaq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6srkd"]
+bg_color = Color(0.105882, 0.552941, 0.870588, 1)
+
+[node name="Upgrade Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="MainLayout" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Header" type="Control" parent="MarginContainer/MainLayout"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="Upgrades" type="Label" parent="MarginContainer/MainLayout/Header"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 35.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "UPGRADES"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Currency" type="Label" parent="MarginContainer/MainLayout/Header"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 35.0
+grow_horizontal = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 25
+text = "CURRENCY: 0"
+horizontal_alignment = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/MainLayout"]
+clip_contents = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="UpgradeButton" parent="MarginContainer/MainLayout/ScrollContainer/VBoxContainer" instance=ExtResource("1_7soa5")]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="Footer" type="Control" parent="MarginContainer/MainLayout"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="Background" type="Panel" parent="MarginContainer/MainLayout/Footer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6srkd")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MainLayout/Footer"]
+custom_minimum_size = Vector2(1000, 100)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -500.0
+offset_top = -136.0
+offset_right = 500.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 133
+alignment = 1
+
+[node name="Upgrades" type="Button" parent="MarginContainer/MainLayout/Footer/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("2_sfuaq")
+flat = true
+
+[node name="Pause" type="Button" parent="MarginContainer/MainLayout/Footer/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("2_sfuaq")
+flat = true
+
+[node name="Exit" type="Button" parent="MarginContainer/MainLayout/Footer/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("2_sfuaq")
+flat = true

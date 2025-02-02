@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cncygcmg2jmvg"]
+
+[ext_resource type="Script" path="res://MWM/mwm.gd" id="1_gojap"]
+[ext_resource type="PackedScene" uid="uid://bslwqb0kf4t6s" path="res://over world/WurmGame/Desert/Desert.tscn" id="2_8a58j"]
+
+[node name="MWM" type="Node"]
+script = ExtResource("1_gojap")
+
+[node name="Desert" parent="." instance=ExtResource("2_8a58j")]

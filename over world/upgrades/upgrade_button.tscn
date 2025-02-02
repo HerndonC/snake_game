@@ -1,0 +1,71 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0efo7cdsxgc5"]
+
+[ext_resource type="Texture2D" uid="uid://dg27a4un4hha0" path="res://icon.svg" id="1_xmjdo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_liakg"]
+
+[node name="UpgradeButton" type="Button"]
+anchors_preset = -1
+anchor_right = 0.9
+anchor_bottom = 0.083
+offset_right = -6.10352e-05
+offset_bottom = 0.399994
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_xmjdo")
+expand_mode = 3
+
+[node name="LeftSide" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="MarginContainer/HBoxContainer/LeftSide"]
+layout_mode = 2
+text = "UpgradeName"
+
+[node name="DescriptionLabel" type="Label" parent="MarginContainer/HBoxContainer/LeftSide"]
+layout_mode = 2
+text = "Text that describes the upgrade
+"
+label_settings = SubResource("LabelSettings_liakg")
+
+[node name="FlavorTextLabel" type="RichTextLabel" parent="MarginContainer/HBoxContainer/LeftSide"]
+clip_contents = false
+layout_mode = 2
+text = "Flavor Text..."
+fit_content = true
+
+[node name="RightSide" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_constants/separation = -4
+
+[node name="CostLabel" type="Label" parent="MarginContainer/HBoxContainer/RightSide"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "COST: 0"
+
+[node name="LevelLabel" type="Label" parent="MarginContainer/HBoxContainer/RightSide"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
+text = "LEVEL: 1/1"
+horizontal_alignment = 2
+vertical_alignment = 2
