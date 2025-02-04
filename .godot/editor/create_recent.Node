@@ -1,3 +1,4 @@
+Label
 Node
 Control
 Button
@@ -5,7 +6,6 @@ HBoxContainer
 MarginContainer
 Panel
 RichTextLabel
-Label
 VBoxContainer
 CanvasLayer
 ScrollContainer

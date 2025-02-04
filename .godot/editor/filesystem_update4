@@ -1,10 +1,10 @@
-res://over world/WurmGame/Desert/Desert.tscn
+res://MWM/mwm.tscn
 res://over world/ui/hud.tscn
-res://singleton/snake_segment.tscn
 res://singleton/game_over_menu.tscn
 res://over world/upgrades/upgrade_menu.tscn
 res://over world/upgrades/upgrade_button.tscn
 res://over world/upgrades/game_controller_bar.tscn
-res://MWM/mwm.tscn
-res://over world/WurmGame/Desert/Desert.gd
+res://over world/WurmGame/Desert/Desert.tscn
+res://singleton/snake_segment.tscn
 res://MWM/mwm.gd
+res://over world/WurmGame/Desert/Desert.gd

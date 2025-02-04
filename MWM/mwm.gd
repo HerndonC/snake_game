@@ -1,79 +1,197 @@
+class_name mwm
 extends Node
 
-
-# Store all high scores in a dictionary
-var high_scores = {
+#Upgrades and Highscores
+var level = {
 	"landfill": {
-		"level1": 0,
-		"level2": 0,
-		"level3": 0,
-		"level4": 0,
-		"level5": 0,
-		"level6": 0,
-		"level7": 0
+		"level1": {
+			"highscore": 0, 
+		},
+		"level2": {
+			"highscore": 0, 
+		},
+		"level3": {
+			"highscore": 0, 
+		},
+		"level4": {
+			"highscore": 0, 
+		},
+		"level5": {
+			"highscore": 0, 
+		},
+		"level6": {
+			"highscore": 0, 
+		},
+		"level7": {
+			"highscore": 0, 
+		}
 	},
 	"slime": {
-		"agar": 0,
-		"gum": 0,
-		"molasses": 0,
-		"oil": 0,
-		"hazardous_waste": 0,
-		"mercury": 0,
-		"antimatter": 0
+		"agar": {
+			"highscore": 0,
+		},
+		"gum": {
+			"highscore": 0,
+		},
+		"molasses": {
+			"highscore": 0,
+		},
+		"oil": {
+			"highscore": 0,
+		},
+		"hazardous_waste": {
+			"highscore": 0,
+		},
+		"mercury": {
+			"highscore": 0,
+		},
+		"antimatter": {
+			"highscore": 0,
+		}
 	},
 	"wurm": {
-		"desert": 0,
-		"marsh": 0,
-		"mountain": 0,
-		"abyss": 0,
-		"hell": 0,
-		"heaven": 0,
-		"knowledge": 0
-	},
-	"scarecrow": {
-		"farm": 0,
-		"valley": 0,
-		"crop_circle": 0,
-		"forest": 0,
-		"peridot_city": 0,
-		"bedlam": 0,
-		"strawpocalypse": 0
+		"desert": {
+			"highscore": 0,
+			"wurm_size": 1, #Big Boned - Amount of segments on snake at the start
+			"pear_points": 1, #Fibrous - Points per pear
+			"hs_multiplier": 2, #Self Hype - Currency multiplier from HS
+			"fruit_respawn": 16, #Botanist - Seconds for new spawn
+			"pear_spawn_rate": 1, #Fruition - Amount of pear spawn
+			"cactus_growth": 1000, #Epoch GMO - Time it takes for a pear to grow
+			"less_walls": 5, #Migration - Less walls tile map, procedurally generated
+			"wurm_speed": 0.6, #Balanced Tail - Speed in seconds
+			"cinnamon_rate": 10.0, #The Spice Must Flow - Cinnamon every X points
+			"size_points": 1.0, #Elder - Multiplier based on the size of the wurm
+			"no_bounds": false, #Mirage Walker - Unlocks Sidewinder - Wraps around the sides instead of dieing
+			"shift_position": false, #Sindewinder - Requires Mirage Walker - Will automatically shift over one when wrapping around
+			"eat_cacti": false, #Keratin Papillae - Allows you to eat cacti
+			"break_walls": false, #Annular Teeth - Allows you to go through walls
+			"cannibalize": false, #Lizard Tails - Eating your tail doesn't kill you - Unlocks Ouroboros
+			"ouroboros": false, #Ouroboros - Eating yourself gives points
+		},
+		"marsh": {
+			"highscore": 0,
+		},
+		"mountain": {
+			"highscore": 0,
+		},
+		"abyss": {
+			"highscore": 0,
+		},
+		"hell": {
+			"highscore": 0,
+		},
+		"heaven": {
+			"highscore": 0,
+		},
+		"knowledge": {
+			"highscore": 0,
+		}
 	},
 	"spider": {
-		"grass": 0, #Predatory Mite - Mite Spider
-		"hollow_log": 0, #Bug Spider - Sheetweb Spider
-		"pond": 0, #Dolomedes - Fish Eating Spider
-		"": 0, #Huntsman/FunnelWeb - Vermin Eating Spider
-		#Man Eating Spider Ship Eating Spider?
-		#Man Eating Spider MegaRachna?
-		"andromeda (M31)": 0 #Asteroid Eating Spider
-	}
-}
-
-#Upgrades
-var upgrades = {
-	"desert": {
-		"starting_size": 1, #Big Boned - Amount of segments on snake at the start
-		"pear_points": 1, #Fibrous - Points per pear
-		"hs_multiplier": 2, #Self Hype - Currency multiplier from HS
-		"fruit_respawn": 16, #Botany - Seconds for new spawn
-		"pear_spawn_rate": 1, #Fruition - Amount of pear spawn
-		"cactus_growth": 1000, #Epoch GMO - Time it takes for a pear to grow
-		"less_walls": 5, #Migration - Less walls tile map, procedurally generated
-		"wurm_speed": 0.6, #Balanced Tail - Speed in seconds
-		"cinnamon_rate": 10.0, #The Spice Must Flow - Cinnamon every X points
-		"size_points": 1.0, #Elder - Multiplier based on the size of the wurm
-		"eat_cacti": false, #Keratin Papillae - Allows you to eat cacti
-		"break_walls": false, #Annular Teeth - Allows you to go through walls
-		"can_eat_self": false, #Lizard Tails - Eating your tail doesn't kill you
-		"ouroboros": false, #Ouroboros - Eating yourself gives points
+		"grass": { #Predatory Mite - Mite Spider
+			"highscore": 0, 
+		}, 
+		"log": { #Bug Spider - Sheetweb Spider
+			"highscore": 0, 
+		}, 
+		"pond": { #Dolomedes - Fish Eating Spider
+			"highscore": 0, 
+		},
+		"rainforest": { #FunnelWeb - Vermin Eating Spider
+			"highscore": 0, 
+		},
+		"islands": { #Huntsman - Man Eating Spider
+			"highscore": 0, 
+		},
+		"bermuda_triangle": { #Arachnocetus - Ship Eating Spider
+			"highscore": 0, 
+		},
+		"andromeda (M31)": { #Asteroid Eating Spider
+			"highscore": 0, 
+		}
+	},
+	"scarecrow": {
+		"farm": {
+			"highscore": 0,
+		},
+		"valley": {
+			"highscore": 0,
+		},
+		"crop_circle": {
+			"highscore": 0,
+		},
+		"forest": {
+			"highscore": 0,
+		},
+		"peridot_city": {
+			"highscore": 0,
+		},
+		"bedlam": {
+			"highscore": 0,
+		},
+		"strawpocalypse":{
+			"highscore": 0,
+		}
+	},
+	"hunger": {
+		"locusts": {
+			"highscore": 0,
+		},
+		"piranha": {
+			"highscore": 0,
+		},
+		"hippopotamus": {
+			"highscore": 0,
+		},
+		"wendigo": {
+			"highscore": 0,
+		},
+		"gashadokuro": {
+			"highscore": 0,
+		},
+		"gluttony": {
+			"highscore": 0,
+		},
+		"cooper": {
+			"highscore": 0,
+		}
+	},
+	"projectiles": {
+		"nessie": {
+			"highscore": 0,
+		},
+		"skunkape": {
+			"highscore": 0,
+		},
+		"mothman": {
+			"highscore": 0,
+		},
+		"medusa": {
+			"highscore": 0,
+		},
+		"harpy": {
+			"highscore": 0,
+		},
+		"chimera": {
+			"highscore": 0,
+		},
+		"hydra": {
+			"highscore": 0,
+		}
 	}
 }
 
 # Currency
 var currency = {
-	"guap": 0,
-	"cinnamon": 0
+	"guap": 0.0,
+	"cinnamon": 0.0,
+	"peat": 0.0,
+	"bluepoppy": 0.0,
+	"anoxicpearls": 0.0,
+	"helelice": 0.0,
+	"tovwaraseed": 0.0,
+	"scientmotes": 0.0
 }
 
 var save_path = "user://variable.save"
@@ -87,7 +205,7 @@ func load_data():
 		var file = FileAccess.open(save_path, FileAccess.READ)
 		var data = file.get_var()
 		if data:
-			high_scores = data.high_scores
+			level = data.level
 			currency = data.currency
 	else:
 		print("No data saved...")
@@ -95,7 +213,7 @@ func load_data():
 func save():
 	var file = FileAccess.open(save_path, FileAccess.WRITE)
 	var save_data = {
-		"high_scores": high_scores,
+		"level": level,
 		"currency": currency
 	}
 	file.store_var(save_data)

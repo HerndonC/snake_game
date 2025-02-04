@@ -16,9 +16,8 @@ var regen_food : bool = true
 
 #snake variables
 var old_data : Array
-var snake_data : Array
+var snake_data : Array #Segments, head is 0
 var snake : Array
-var starting_wurm_size = 1
 
 #movement variables
 var start_pos = Vector2(9, 9)
@@ -50,7 +49,7 @@ func generate_snake():
 	snake_data.clear()
 	snake.clear()
 	#starting in the start_pos, create tail segments vertically down
-	for i in range(get_node("/root/MWM").upgrades["desert"]["starting_size"]):
+	for i in range(get_node("/root/MWM").level["wurm"]["desert"]["wurm_size"]):
 		add_segment(start_pos + Vector2(0,i))
 
 func add_segment(pos):
@@ -63,6 +62,7 @@ func add_segment(pos):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	move_snake()
+	$Hud.get_node("MarginContainer/HBoxContainer/CurrencyLabel").text = "Cinnamon: " + str(get_node("/root/MWM").currency["cinnamon"])
 
 func move_snake():
 	if can_move:
@@ -94,7 +94,6 @@ func start_game():
 
 
 func _on_move_timer_timeout() -> void:
-	pass # Replace with function body.
 	can_move = true
 	#use the snakes previous position to move the segment
 	old_data = [] + snake_data
@@ -104,23 +103,52 @@ func _on_move_timer_timeout() -> void:
 		if i > 0:
 			snake_data[i] = old_data[i - 1]
 		snake[i].position = (snake_data[i] * cell_size) + Vector2(0, cell_size)
+	
 	check_out_of_bounds()
+	check_in_wall()
 	check_self_eaten()
+	check_cacti_eaten()
 	check_food_eaten()
 
 func check_out_of_bounds():
 	if snake_data[0].x < 0 or snake_data[0].x > cells - 1 or snake_data[0].y < 0 or snake_data[0].y > cells - 1:
-		end_game()
+		#if get_node("/root/MWM").level["wurm"]["desert"]["no_bounds"]:
+		#	end_game()
+		#else:
+			#if get_node("/root/MWM").level["wurm"]["desert"]["shift_position"]:
+			if snake_data[0].x < 0 or snake_data[0].x > cells - 1:
+				Vector2(0, 1)
+			elif snake_data[0].y < 0 or snake_data[0].y > cells - 1:
+				Vector2(1, 0)
+			else:
+				pass
+			if snake_data[0].x < 0:
+				snake_data[0].x = cells - 1
+			elif snake_data[0].x > cells - 1:
+				snake_data[0].x = - 1
+			elif snake_data[0].y < 0:
+				snake_data[0].y = cells - 1
+			elif snake_data[0].y > cells - 1:
+				snake_data[0].y = - 1
+
+func check_in_wall():
+	pass
 	
 func check_self_eaten():
 	for i in range(1, len(snake_data)):
 		if snake_data[0] == snake_data[i]:
-			end_game()
+			if get_node("/root/MWM").level["wurm"]["desert"]["cannibalize"]:
+				pass
+			else:
+				end_game()
+
+func check_cacti_eaten():
+	pass
 
 func check_food_eaten():
 	#if snake eats the food, add segment and move the food
 	if snake_data[0] == food_pos:
-		score += get_node("/root/MWM").upgrades["desert"]["pear_points"]
+		score += get_node("/root/MWM").level["wurm"]["desert"]["pear_points"]
 		$Hud.get_node("MarginContainer/HBoxContainer/ScoreLabel").text =  "Score: " + str(score)
 		add_segment(old_data[-1])
 		move_food()
@@ -136,8 +164,29 @@ func move_food():
 	regen_food = true
 
 func end_game():
+	var cinnamongained = score / get_node("/root/MWM").level["wurm"]["desert"]["cinnamon_rate"]
+	$GameOverMenu.get_node("GameOverPanel/VBoxContainer/CurrencyGainedSubtotal").text = "SUBTOTAL: " + str(cinnamongained)
+	var multiplier = 1.0
+	if score > get_node("/root/MWM").level["wurm"]["desert"]["highscore"]:
+		$GameOverMenu.get_node("GameOverPanel/VBoxContainer/ResultsLabel").text = "HIGH SCORE!"
+		multiplier *= get_node("/root/MWM").level["wurm"]["desert"]["hs_multiplier"]
+		$GameOverMenu.get_node("GameOverPanel/VBoxContainer/Multiplier").text = "MULTIPLIER: x" + str(int(multiplier))
+		cinnamongained *= multiplier
+		get_node("/root/MWM").level["wurm"]["desert"]["highscore"] = score
+	else:
+		$GameOverMenu.get_node("GameOverPanel/VBoxContainer/ResultsLabel").text = "RESULTS!"
+		$GameOverMenu.get_node("GameOverPanel/VBoxContainer/Multiplier").text = "MULTIPLIER: x" + str(multiplier)
+	get_node("/root/MWM").currency["cinnamon"] += cinnamongained
+	
+	get_node("/root/MWM").save()
 	$GameOverMenu.show()
 	$MoveTimer.stop()
+	$GameOverMenu.get_node("GameOverPanel/VBoxContainer/ResultsPoints").text = "SCORE: " + str(score)
+	$GameOverMenu.get_node("GameOverPanel/VBoxContainer/HighScore").text = "HIGHSCORE: " + str(get_node("/root/MWM").level["wurm"]["desert"]["highscore"])
+	$GameOverMenu.get_node("GameOverPanel/VBoxContainer/CurrencyGainedTotal").text = "TOTAL: " + str(cinnamongained)
+	$GameOverMenu.get_node("GameOverPanel/VBoxContainer/Currency").text = "TOTAL CINNAMON: " + str(get_node("/root/MWM").currency["cinnamon"])
+
+	
 	game_started = false
 	get_tree().paused = true
 
