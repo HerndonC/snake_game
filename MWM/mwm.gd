@@ -205,8 +205,13 @@ func load_data():
 		var file = FileAccess.open(save_path, FileAccess.READ)
 		var data = file.get_var()
 		if data:
-			level = data.level
-			currency = data.currency
+			for section in data.level:
+				for area in data.level[section]:
+					for key in data.level[section][area]:
+						level[section][area][key] = data.level[section][area][key]
+
+			for currency_type in data.currency:
+				currency[currency_type] = data.currency[currency_type]
 	else:
 		print("No data saved...")
 

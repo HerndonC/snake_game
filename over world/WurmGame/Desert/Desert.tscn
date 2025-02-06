@@ -19,7 +19,7 @@ texture = ExtResource("3_0ur64")
 [node name="Hud" parent="." instance=ExtResource("4_a4ylm")]
 
 [node name="MoveTimer" type="Timer" parent="."]
-wait_time = 0.1
+wait_time = 0.5
 
 [node name="Food" type="Sprite2D" parent="."]
 texture = ExtResource("5_bruc1")

@@ -95,41 +95,47 @@ func start_game():
 
 func _on_move_timer_timeout() -> void:
 	can_move = true
-	#use the snakes previous position to move the segment
 	old_data = [] + snake_data
 	snake_data[0] += move_direction
 	for i in range(len(snake_data)):
 		#move all segments along by one
 		if i > 0:
 			snake_data[i] = old_data[i - 1]
-		snake[i].position = (snake_data[i] * cell_size) + Vector2(0, cell_size)
 	
 	check_out_of_bounds()
 	check_in_wall()
 	check_self_eaten()
 	check_cacti_eaten()
 	check_food_eaten()
+	
+	update_snake_visual() #Update visuals after all position corrections
 
 func check_out_of_bounds():
 	if snake_data[0].x < 0 or snake_data[0].x > cells - 1 or snake_data[0].y < 0 or snake_data[0].y > cells - 1:
-		#if get_node("/root/MWM").level["wurm"]["desert"]["no_bounds"]:
-		#	end_game()
-		#else:
-			#if get_node("/root/MWM").level["wurm"]["desert"]["shift_position"]:
-			if snake_data[0].x < 0 or snake_data[0].x > cells - 1:
-				Vector2(0, 1)
-			elif snake_data[0].y < 0 or snake_data[0].y > cells - 1:
-				Vector2(1, 0)
+		if get_node("/root/MWM").level["wurm"]["desert"]["no_bounds"]:
+			if get_node("/root/MWM").level["wurm"]["desert"]["shift_position"]:
+				if snake_data[0].x < 0 or snake_data[0].x > cells - 1:
+					pass
+				elif snake_data[0].y < 0 or snake_data[0].y > cells - 1:
+					pass
 			else:
 				pass
 			if snake_data[0].x < 0:
 				snake_data[0].x = cells - 1
 			elif snake_data[0].x > cells - 1:
-				snake_data[0].x = - 1
-			elif snake_data[0].y < 0:
+				snake_data[0].x = 0
+				
+			if snake_data[0].y < 0:
 				snake_data[0].y = cells - 1
 			elif snake_data[0].y > cells - 1:
-				snake_data[0].y = - 1
+				snake_data[0].y = 0
+		else:
+			end_game()
+
+
+func update_snake_visual():
+	for i in range(len(snake_data)):
+		snake[i].position = (snake_data[i] * cell_size) + Vector2(0, cell_size)
 
 func check_in_wall():
 	pass
@@ -137,7 +143,7 @@ func check_in_wall():
 func check_self_eaten():
 	for i in range(1, len(snake_data)):
 		if snake_data[0] == snake_data[i]:
-			if get_node("/root/MWM").level["wurm"]["desert"]["cannibalize"]:
+			if not get_node("/root/MWM").level["wurm"]["desert"]["cannibalize"]:
 				pass
 			else:
 				end_game()
