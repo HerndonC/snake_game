@@ -86,6 +86,24 @@ var level = {
 		},
 		"knowledge": {
 			"highscore": 0,
+			"epistemology": false,
+			"experience": 1.0, #Experience increases guap
+			"philosophy": false,
+			"dialectic": false,
+			"empiricism": false,
+			"pedagogy": false,
+			"cognition": false,
+			"hermeneutics": false,
+			"ontology": false,
+			"heuristic": false,
+			"metacognition": false,
+			"axiom": false,
+			"praxis": false,
+			"syllogism": false,
+			"synthesis": false,
+			"gnosis": false,
+			"rhetoric": false,
+			"semiotics": false
 		}
 	},
 	"spider": {
