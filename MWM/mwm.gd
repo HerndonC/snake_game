@@ -104,9 +104,12 @@ var level = {
 			#rubber ducky easter egg
 			#anoxic layer
 			#chemosynthesis
+			#hydrothermal vents
+			#Whale fall
 		},
 		"hell": {
 			"highscore": 0,
+			#Respawn rate of the sinners
 		},
 		"heaven": {
 			"highscore": 0,
@@ -159,7 +162,7 @@ var level = {
 			"highscore": 0, 
 		}
 	},
-	"scarecrow": {
+	"scarecrow": { #Requirements: Grain Wreaths
 		"farm": {
 			"highscore": 0,
 		},
@@ -174,6 +177,7 @@ var level = {
 		},
 		"peridot_city": {
 			"highscore": 0,
+			"strawman": 0, #Create fakes
 		},
 		"bedlam": {
 			"highscore": 0,
@@ -206,13 +210,13 @@ var level = {
 		}
 	},
 	"projectiles": {
-		"nessie": {
+		"one": {
 			"highscore": 0,
 		},
-		"skunkape": {
+		"two": {
 			"highscore": 0,
 		},
-		"mothman": {
+		"three": {
 			"highscore": 0,
 		},
 		"medusa": {
@@ -227,19 +231,108 @@ var level = {
 		"hydra": {
 			"highscore": 0,
 		}
+	},
+	"maze": {
+		"threads": { #Naxos - Ariadne's Thread
+			#2d Platformer, start from left, go right. The further right
+			#the more points (Points based on max distance traveled right). 
+			#Start with fixed amount of yarn. Recover yarn by backtracking.
+			#
+			#Create permanant structures that consume yarn.
+				#Bridges, ladders, restraints for enemies
+			#Can repel down holes and climb back up, recovering yarn.
+			#Running out of yarn unravels you, ending run
+			
+		},
+		"labyrinth": { #Asterius - Grain Wreaths - Requrements: Ariadne's Thread
+			#Top down maze, darkness around edges
+			#Anti-pacman, 14 boys and girls, running from you. More traps to make them run towards you
+			#Longer it takes, less terrifying, sooner hero comes to kill you, end the run.
+				#Faster captures increases terror
+			#Daedulus can add traps with upgrades to herd sacrifices
+			#Victims react to hearing range - Move faster away from you or turn around
+			#Upgrades - Charge, Speed Increase, Quieter, More traps, More terror
+			
+		},
+		"twin_flames": { #Jack/Jill or TBD - Foolish Fire - Requirements: Grain Wreaths
+			# Control two characters, switching with a button
+			# Light based puzzles, can only see around you
+			# Water and wind hazards
+			# Losing one character ends the run
+			# upgrade: Fire Walk With Me
+		},
+		"snowman": { #Snowman - Coal - RQ: Helel Ice, Book of Prayers
+			# Top down
+			# Start small, collecting snow increases your size. 
+			# Time mechanic, the longer time goes, the more you melt, melting rate increases. starts at midnight
+			# Points based on biggest size achieved and total amount of snow collected
+			# Avoid hotter zones, stay alive as long as possible
+		},
+		"playing_god": { #Prometheus - Vital Sparks - RQ: 
+			#Navigate through city avoiding mob
+			#Manage electrical charge
+			#Various charging methods
+			#Health system
+			#Points based on survival time
+			
+		},
+		"homunculus": { #Name: - Mirror Fragments - Requirements: Vital Sparks
+			# Different abilities possibly at random? Upgrade allows for more than one ability
+			# Chips challenge style, different elements, different abilities. Procedural chips challenge?
+			# Transmute between states
+		},
+		"simulacrum": { #Name: - Motes of Reflection - Requirements: Motes of Scient, Mirror Fragments
+			# Form rating system
+			# Synchonized movement of all simulacrum
+			# Mirror breaking creates copies but reduces form
+			# Barriers requiring certain amount of simulacra
+			# Combining Simulacra increases perfection
+			#Upgrades:
+				#Uncanny Valley: Reduces Form loss when breaking mirrors 8 levels? 20%-90%
+				#Perfect Form: Increases base Form rating
+				#Ideal Number: Allows more max simulacra
+				#Divided Line: Halve Form to create copies
+				#Anamnesis: Improves recombination efficiency (20% to 90%)
+				#Cave Shadows: TBD
+		}
+	},
+	"stealth": {
+		# Nessie
+		# Skunkape
+		# Mothman
+		"monastery": { #Name: Demon, Currency: Book of Prayers
+			#Monastery - Possess inanimate objects, perhaps eventually people
+			#Different people, different strength
+				#Bishop
+			#Spiritual energy, can only possess very close by, upgrade for longer distance
+			#Observe monk patterns in the game
+			#Monks have sanity?
+			#Stamina in different vessels
+			#Keys can unlock doors, candles to start fires
+			#Books can fly over salt
+			#bells make sound
+			#
+			#Upgrades:
+				#Range of possession
+				#Object mastery - Increases abilities (size of candle flame, how far a book can fly)
+				#Extinguish candles - Lowers sanity
+				#
+			
+			
+		}
 	}
 }
 
 # Currency
 var currency = {
-	"guap": 0.0,
-	"cinnamon": 0.0,
-	"peat": 0.0,
-	"bluepoppy": 0.0,
-	"anoxicpearls": 0.0,
-	"helelice": 0.0,
-	"tovwaraseed": 0.0,
-	"scientmotes": 0.0
+	"guap": 0.0,				#Generic money, used everywhere
+	"cinnamon": 0.0,			#Desert - Sand Wurm
+	"peat": 0.0,				#Marsh - Mud Wurm
+	"bluepoppy": 0.0,		#Mountain - Snow Wurm
+	"anoxicpearls": 0.0,		#Abyss - Kraken Wurm
+	"helelice": 0.0,			#Hell - Leviathan Wurm
+	"tovwaraseed": 0.0,		#Heaven - Apocrapha Wurm
+	"scientmotes": 0.0		#Reality - Book Wurm
 }
 
 var save_path = "user://variable.save"
