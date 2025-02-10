@@ -1,6 +1,7 @@
 extends Node
 
 @export var snake_scene : PackedScene
+var mwm # Reference to singleton
 
 #game variables
 var score : int
@@ -31,6 +32,7 @@ var can_move : bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	mwm = get_node("/root/MWM")
 	new_game()
 
 func new_game():

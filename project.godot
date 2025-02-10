@@ -15,6 +15,10 @@ run/main_scene="res://MWM/mwm.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Mwm="*res://MWM/mwm.gd"
+
 [display]
 
 window/size/viewport_width=1000

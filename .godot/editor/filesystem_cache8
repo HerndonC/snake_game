@@ -1,14 +1,15 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1738990132
+::res://::1739147958
+desert_data.gd::GDScript::-1::1739086212::0::1::::DesertData<>Resource<>::
 icon.svg::CompressedTexture2D::7638077810738578269::1738023627::1738130959::1::::<><>::
 README.md::TextFile::-1::1738023191::0::1::::<><>::
 ::res://assets/::1738130960
 apple.png::CompressedTexture2D::8824434516607673997::1738025411::1738130959::1::::<><>::
 bg.png::CompressedTexture2D::3073879992024540412::1738025411::1738130960::1::::<><>::
 MaldiniBold.ttf::FontFile::1256330068851899642::1738025411::1738130959::1::::<><>::
-::res://MWM/::1738733959
-mwm.gd::GDScript::-1::1738733709::0::1::::mwm<>Node<>::
-mwm.tscn::PackedScene::5690893136671982392::1738733959::0::1::::<><>::res://MWM/mwm.gd<>uid://bslwqb0kf4t6s::::res://over world/WurmGame/Desert/Desert.tscn
+::res://MWM/::1739085665
+mwm.gd::GDScript::-1::1739085665::0::1::::<>Node<>::
+mwm.tscn::PackedScene::5690893136671982392::1739083492::0::1::::<><>::res://MWM/mwm.gd<>uid://bslwqb0kf4t6s::::res://over world/WurmGame/Desert/Desert.tscn
 ::res://over world/::1738392640
 ::res://over world/ui/::1738733846
 hud.tscn::PackedScene::1422882233071361880::1738733846::0::1::::<><>::uid://r5ttqaxnuvgk::::res://assets/MaldiniBold.ttf
@@ -19,8 +20,8 @@ upgrade_button.tscn::PackedScene::8922570923122937522::1738733846::0::1::::<><>:
 upgrade_menu.tscn::PackedScene::225400026014977608::1738733846::0::1::::<><>::uid://d0efo7cdsxgc5::::res://over world/upgrades/upgrade_button.tscn<>uid://dg27a4un4hha0::::res://icon.svg
 upgrade_menu_footer.tscn::PackedScene::6396160901071791288::1738398750::0::1::::<><>::
 ::res://over world/WurmGame/::1738392640
-::res://over world/WurmGame/Desert/::1738811966
-Desert.gd::GDScript::-1::1738811966::0::1::::<>Node<>::
+::res://over world/WurmGame/Desert/::1739083492
+Desert.gd::GDScript::-1::1739083492::0::1::::<>Node<>::
 Desert.tscn::PackedScene::3673892462621341364::1738733846::0::1::::<><>::res://over world/WurmGame/Desert/Desert.gd<>uid://cwbyjux1cdyr4::::res://singleton/snake_segment.tscn<>uid://bj2ambwei5ogi::::res://assets/bg.png<>uid://ujiwr3vh4tto::::res://over world/ui/hud.tscn<>uid://dxyvfago0gd5f::::res://assets/apple.png<>uid://qft2ftv8xdjm::::res://singleton/game_over_menu.tscn<>uid://cm7jcjmdy4egx::::res://over world/upgrades/game_controller_bar.tscn
 ::res://singleton/::1738733846
 game_over_menu.gd::GDScript::-1::1738443362::0::1::::<>CanvasLayer<>::

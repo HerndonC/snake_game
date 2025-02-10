@@ -1,5 +1,7 @@
-class_name mwm
 extends Node
+
+var desert_data: DesertData
+
 
 #Upgrades and Highscores
 var level = {
@@ -71,18 +73,46 @@ var level = {
 		},
 		"marsh": {
 			"highscore": 0,
+			"amphibious": false,
+			"shell_cracker": false, #Eat turtles
+			"eat_the_ancients": false, #Eat crocodiles
+			"Dam Buster": false,
+			"mudskipperFins": false,
+			
 		},
 		"mountain": {
 			"highscore": 0,
+			"windcutter": 0, #Can't be slowed by winds
+			"splitter": 0, #Trees split wurm into clones
+			"revenge": false, #Eat yetis
+			"eatrocks": false,
+			"variablespeed": false, #can slow or speed up
+			"with a nice chianti": 1.0, #humans worth more points
+			
 		},
 		"abyss": {
 			"highscore": 0,
+			"crushingpressure": false, #can go further up
+			#things that shoot you up and down
+			#stalactite and thermal vents
+			#tentacle amount
+			#tentacle reach
+			#tentacle speed
+			#health regen
+			#bioluminescence, make it dark at the base with thermal vents and jellyfish visibile
+			#eat jellyfish
+			#rubber ducky easter egg
+			#anoxic layer
+			#chemosynthesis
 		},
 		"hell": {
 			"highscore": 0,
 		},
 		"heaven": {
 			"highscore": 0,
+			#floating islands and spheres
+			# wheel angels
+			#gather orbs to unlock further areas
 		},
 		"knowledge": {
 			"highscore": 0,
@@ -216,6 +246,7 @@ var save_path = "user://variable.save"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	desert_data = DesertData.new()
 	load_data()
 
 func load_data():
