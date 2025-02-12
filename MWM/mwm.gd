@@ -52,25 +52,6 @@ var level = {
 		}
 	},
 	"wurm": {
-		"desert": {
-			"highscore": 0,
-			"wurm_size": 1, #Big Boned - Amount of segments on snake at the start
-			"pear_points": 1, #Fibrous - Points per pear
-			"hs_multiplier": 2, #Self Hype - Currency multiplier from HS
-			"fruit_respawn": 16, #Botanist - Seconds for new spawn
-			"pear_spawn_rate": 1, #Fruition - Amount of pear spawn
-			"cactus_growth": 1000, #Epoch GMO - Time it takes for a pear to grow
-			"less_walls": 5, #Migration - Less walls tile map, procedurally generated
-			"wurm_speed": 0.6, #Balanced Tail - Speed in seconds
-			"cinnamon_rate": 10.0, #The Spice Must Flow - Cinnamon every X points
-			"size_points": 1.0, #Elder - Multiplier based on the size of the wurm
-			"no_bounds": false, #Mirage Walker - Unlocks Sidewinder - Wraps around the sides instead of dieing
-			"shift_position": false, #Sindewinder - Requires Mirage Walker - Will automatically shift over one when wrapping around
-			"eat_cacti": false, #Keratin Papillae - Allows you to eat cacti
-			"break_walls": false, #Annular Teeth - Allows you to go through walls
-			"cannibalize": false, #Lizard Tails - Eating your tail doesn't kill you - Unlocks Ouroboros
-			"ouroboros": false, #Ouroboros - Eating yourself gives points
-		},
 		"marsh": {
 			"highscore": 0,
 			"amphibious": false,
@@ -193,7 +174,7 @@ var level = {
 		"piranha": {
 			"highscore": 0,
 		},
-		"hippopotamus": {
+		"hippo": {
 			"highscore": 0,
 		},
 		"wendigo": {
@@ -325,14 +306,15 @@ var level = {
 
 # Currency
 var currency = {
-	"guap": 0.0,				#Generic money, used everywhere
-	"cinnamon": 0.0,			#Desert - Sand Wurm
-	"peat": 0.0,				#Marsh - Mud Wurm
-	"bluepoppy": 0.0,		#Mountain - Snow Wurm
-	"anoxicpearls": 0.0,		#Abyss - Kraken Wurm
-	"helelice": 0.0,			#Hell - Leviathan Wurm
-	"tovwaraseed": 0.0,		#Heaven - Apocrapha Wurm
-	"scientmotes": 0.0		#Reality - Book Wurm
+	"guap": 0,				#Generic money, used everywhere
+	"cinnamon": 0,			#Desert - Sand Wurm
+	"peat": 0,				#Marsh - Mud Wurm
+	"bluepoppy": 0,		#Mountain - Snow Wurm
+	"anoxicpearls": 0,		#Abyss - Kraken Wurm
+	"helelice": 0,			#Hell - Leviathan Wurm
+	"tovwaraseed": 0,		#Heaven - Apocrapha Wurm
+	"scientmotes": 0		#Reality - Book Wurm
+	
 }
 
 var save_path = "user://variable.save"
