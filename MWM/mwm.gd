@@ -28,6 +28,24 @@ var level = {
 			"highscore": 0, 
 		}
 	},
+	"constraint": {
+		"basicDistanceConstraint": false, 
+		#function ConstrainDistance(point, anchor, distance) {
+			#return ((point - anchor).normalize() * distance) + anchor;
+		#}
+		"distanceConstantConstraint": false,
+		#https://github.com/zalo/zalo.github.io/blob/master/assets/js/Constraints/Chain.js
+		"FABRIKChain": false, 
+		#https://github.com/zalo/zalo.github.io/blob/master/assets/js/Constraints/FABRIK.js
+		"collisionConstraint": false,
+		#https://github.com/zalo/zalo.github.io/blob/master/assets/js/Constraints/Collision.js
+		"collisionConstraintsWithVerlet": false,
+		#https://github.com/zalo/zalo.github.io/blob/master/assets/js/Constraints/VerletCollision.js
+		"verletRope": false,
+		#https://github.com/zalo/zalo.github.io/blob/master/assets/js/Constraints/RedRope.js
+		"volumePreservingSoftBody": false
+		#https://github.com/zalo/zalo.github.io/blob/master/assets/js/Constraints/VolumeBlob.js
+	},
 	"slime": {
 		"agar": {
 			"highscore": 0,
