@@ -84,7 +84,8 @@ var level = {
 			"windcutter": 0, #Can't be slowed by winds
 			"splitter": 0, #Trees split wurm into clones
 			"revenge": false, #Eat yetis
-			"eatrocks": false,
+			"foundThem": false, #Spawn rate of humans and yetis are reversed
+			"jumpRocks": false, #Jump over rocks
 			"variablespeed": false, #can slow or speed up
 			"with a nice chianti": 1.0, #humans worth more points
 			
@@ -93,18 +94,18 @@ var level = {
 			"highscore": 0,
 			"crushingpressure": false, #can go further up
 			#things that shoot you up and down
-			#stalactite and thermal vents
-			#tentacle amount
-			#tentacle reach
-			#tentacle speed
-			#health regen
-			#bioluminescence, make it dark at the base with thermal vents and jellyfish visibile
-			#eat jellyfish
-			#rubber ducky easter egg
-			#anoxic layer
-			#chemosynthesis
-			#hydrothermal vents
-			#Whale fall
+			"crocLeather": 0.0, #Rocks from stalactite and thermal vents deal less damage
+			"neuralRing": false, #Unlocks Tentacle Upgrades
+			"gangliaNetwork": 0, #Number of tentacles 1-10
+			"magnapinna": 1.0, #Length of tentacle
+			"conductionVelocity": 1.0, #Speed of tentacles
+			"planarian": 0, #Health Regen
+			"bioluminescence": 1.0, #make it dark at the base with thermal vents and jellyfish visibile
+			"papillae": false, #eat jellyfish
+			"jeep": false, #rubber ducky easter egg, extra points
+			"cryptobiosis": false, #Survive the anoxic layer
+			"chemosynthesis": false, #Thermal vents now heal instead of hurt
+			"whalefall": 60, #Reduce spawn rate of whale falls that bring lots of fish
 		},
 		"hell": {
 			"highscore": 0,
