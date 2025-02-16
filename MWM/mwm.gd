@@ -75,8 +75,8 @@ var level = {
 			"amphibious": false,
 			"shell_cracker": false, #Eat turtles
 			"eat_the_ancients": false, #Eat crocodiles
-			"Dam Buster": false,
-			"mudskipperFins": false,
+			"Dam Buster": false, #Break through dams
+			"mudskipperFins": false, #Move faster through mud
 			
 		},
 		"mountain": {
@@ -234,6 +234,7 @@ var level = {
 	},
 	"maze": {
 		"threads": { #Naxos - Ariadne's Thread
+			"highscore": 0,
 			#2d Platformer, start from left, go right. The further right
 			#the more points (Points based on max distance traveled right). 
 			#Start with fixed amount of yarn. Recover yarn by backtracking.
@@ -245,6 +246,7 @@ var level = {
 			
 		},
 		"labyrinth": { #Asterius - Grain Wreaths - Requrements: Ariadne's Thread
+			"highscore": 0,
 			#Top down maze, darkness around edges
 			#Anti-pacman, 14 boys and girls, running from you. More traps to make them run towards you
 			#Longer it takes, less terrifying, sooner hero comes to kill you, end the run.
@@ -255,21 +257,21 @@ var level = {
 			
 		},
 		"twin_flames": { #Jack/Jill or TBD - Foolish Fire - Requirements: Grain Wreaths
-			# Control two characters, switching with a button
+			"highscore": 0, # Control two characters, switching with a button
 			# Light based puzzles, can only see around you
 			# Water and wind hazards
 			# Losing one character ends the run
 			# upgrade: Fire Walk With Me
 		},
 		"snowman": { #Snowman - Coal - RQ: Helel Ice, Book of Prayers
-			# Top down
+			"highscore": 0, # Top down
 			# Start small, collecting snow increases your size. 
 			# Time mechanic, the longer time goes, the more you melt, melting rate increases. starts at midnight
 			# Points based on biggest size achieved and total amount of snow collected
 			# Avoid hotter zones, stay alive as long as possible
 		},
 		"playing_god": { #Prometheus - Vital Sparks - RQ: 
-			#Navigate through city avoiding mob
+			"highscore": 0, #Navigate through city avoiding mob
 			#Manage electrical charge
 			#Various charging methods
 			#Health system
@@ -277,12 +279,12 @@ var level = {
 			
 		},
 		"homunculus": { #Name: - Mirror Fragments - Requirements: Vital Sparks
-			# Different abilities possibly at random? Upgrade allows for more than one ability
+			"highscore": 0,# Different abilities possibly at random? Upgrade allows for more than one ability
 			# Chips challenge style, different elements, different abilities. Procedural chips challenge?
 			# Transmute between states
 		},
 		"simulacrum": { #Name: - Motes of Reflection - Requirements: Motes of Scient, Mirror Fragments
-			# Form rating system
+			"highscore":0 ,# Form rating system
 			# Synchonized movement of all simulacrum
 			# Mirror breaking creates copies but reduces form
 			# Barriers requiring certain amount of simulacra
