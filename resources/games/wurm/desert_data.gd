@@ -1,9 +1,11 @@
-# Create a new script called desert_data.gd
+## Resource class for storing Desert level data and upgrades
 extends Resource
 class_name DesertData
 
-# Game Stats, Upgradable
+## Current high score for the Desert level
 @export var highscore: int = 0
+
+# Game Stats and Leveling Upgrades
 @export var wurm_size: int = 1			#Big Boned
 @export var pear_points: int = 1			#Fibrous
 @export var hs_multiplier: int = 2		#Self Hype
@@ -15,7 +17,7 @@ class_name DesertData
 @export var cinnamon_rate: float = 10.0	#The Spice Must Flow
 @export var size_points: float = 1.0		#Respect of the Elders
 
-# Bool Upgrades
+# Bool Upgrades and Unlocks
 @export var no_bounds: bool = false		#Mirage Walker - Unlocks Sidewinder - Wraps sides
 @export var shift_position: bool = false#Requires Mirage Walker - Shifts position on wrap
 @export var eat_cacti: bool = false		#Keratin Papillae - Cactus are 50x current pear_points

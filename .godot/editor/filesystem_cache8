@@ -1,38 +1,39 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1739662576
+::res://::1739743388
+game_data.gd::GDScript::-1::1739736166::0::1::::GameData<>Resource<>::
 icon.svg::CompressedTexture2D::7638077810738578269::1738023627::1738130959::1::::<><>::
 README.md::TextFile::-1::1738023191::0::1::::<><>::
 ::res://assets/::1738130960
 apple.png::CompressedTexture2D::8824434516607673997::1738025411::1738130959::1::::<><>::
 bg.png::CompressedTexture2D::3073879992024540412::1738025411::1738130960::1::::<><>::
 MaldiniBold.ttf::FontFile::1256330068851899642::1738025411::1738130959::1::::<><>::
-::res://MWM/::1739600927
-mwm.gd::GDScript::-1::1739600927::0::1::::<>Node<>::
-mwm.tscn::PackedScene::5690893136671982392::1739083492::0::1::::<><>::res://MWM/mwm.gd<>uid://bslwqb0kf4t6s::::res://over world/WurmGame/Desert/Desert.tscn
+::res://MWM/::1739742952
+mwm.gd::GDScript::-1::1739742266::0::1::::<>Node<>::
+mwm.tscn::PackedScene::5690893136671982392::1739742952::0::1::::<><>::res://MWM/mwm.gd<>uid://bslwqb0kf4t6s::::res://over world/WurmGame/Desert/Desert.tscn
 ::res://over world/::1738392640
-::res://over world/ui/::1738733846
-hud.tscn::PackedScene::1422882233071361880::1738733846::0::1::::<><>::uid://r5ttqaxnuvgk::::res://assets/MaldiniBold.ttf
+::res://over world/ui/::1739742952
+hud.tscn::PackedScene::1422882233071361880::1739742952::0::1::::<><>::uid://r5ttqaxnuvgk::::res://assets/MaldiniBold.ttf
 upgrade_menu.tscn::PackedScene::4730600700175694395::1738379337::0::1::::<><>::
-::res://over world/upgrades/::1738733846
-game_controller_bar.tscn::PackedScene::5681718095112538811::1738733846::0::1::::<><>::uid://dg27a4un4hha0::::res://icon.svg
-upgrade_button.tscn::PackedScene::8922570923122937522::1738733846::0::1::::<><>::uid://dg27a4un4hha0::::res://icon.svg
-upgrade_menu.tscn::PackedScene::225400026014977608::1738733846::0::1::::<><>::uid://d0efo7cdsxgc5::::res://over world/upgrades/upgrade_button.tscn<>uid://dg27a4un4hha0::::res://icon.svg
+::res://over world/upgrades/::1739743320
+game_controller_bar.tscn::PackedScene::5681718095112538811::1739743320::0::1::::<><>::uid://dg27a4un4hha0::::res://icon.svg
+upgrade_button.tscn::PackedScene::8922570923122937522::1739742952::0::1::::<><>::uid://dg27a4un4hha0::::res://icon.svg
+upgrade_menu.tscn::PackedScene::225400026014977608::1739742952::0::1::::<><>::uid://d0efo7cdsxgc5::::res://over world/upgrades/upgrade_button.tscn<>uid://dg27a4un4hha0::::res://icon.svg
 upgrade_menu_footer.tscn::PackedScene::6396160901071791288::1738398750::0::1::::<><>::
 ::res://over world/WurmGame/::1738392640
-::res://over world/WurmGame/Desert/::1739083492
-Desert.gd::GDScript::-1::1739083492::0::1::::<>Node<>::
-Desert.tscn::PackedScene::3673892462621341364::1738733846::0::1::::<><>::res://over world/WurmGame/Desert/Desert.gd<>uid://cwbyjux1cdyr4::::res://singleton/snake_segment.tscn<>uid://bj2ambwei5ogi::::res://assets/bg.png<>uid://ujiwr3vh4tto::::res://over world/ui/hud.tscn<>uid://dxyvfago0gd5f::::res://assets/apple.png<>uid://qft2ftv8xdjm::::res://singleton/game_over_menu.tscn<>uid://cm7jcjmdy4egx::::res://over world/upgrades/game_controller_bar.tscn
+::res://over world/WurmGame/Desert/::1739742952
+desert.gd::GDScript::-1::1739742426::0::1::::<>Node<>::
+Desert.tscn::PackedScene::3673892462621341364::1739742952::0::1::::<><>::res://over world/WurmGame/Desert/desert.gd<>uid://cwbyjux1cdyr4::::res://singleton/snake_segment.tscn<>uid://bj2ambwei5ogi::::res://assets/bg.png<>uid://ujiwr3vh4tto::::res://over world/ui/hud.tscn<>uid://dxyvfago0gd5f::::res://assets/apple.png<>uid://qft2ftv8xdjm::::res://singleton/game_over_menu.tscn<>uid://cm7jcjmdy4egx::::res://over world/upgrades/game_controller_bar.tscn
 ::res://resources/::1739662261
 ::res://resources/games/::1739662215
-::res://resources/games/wurm/::1739662576
-abyss_data.gd::GDScript::-1::1739662498::0::1::::<>Resource<>::
-desert_data.gd::GDScript::-1::1739344488::0::1::::DesertData<>Resource<>::
-heaven_data.gd::GDScript::-1::1739662530::0::1::::<>Resource<>::
-hell_data.gd::GDScript::-1::1739662514::0::1::::<>Resource<>::
-marsh_data.gd::GDScript::-1::1739662345::0::1::::<>Resource<>::
-mountain_data.gd::GDScript::-1::1739662438::0::1::::<>Resource<>::
-reality_data.gd::GDScript::-1::1739662544::0::1::::<>Resource<>::
-::res://singleton/::1739600927
+::res://resources/games/wurm/::1739735977
+abyss_data.gd::GDScript::-1::1739719343::0::1::::AbyssData<>Resource<>::
+desert_data.gd::GDScript::-1::1739735977::0::1::::DesertData<>Resource<>::
+heaven_data.gd::GDScript::-1::1739686143::0::1::::HeavenData<>Resource<>::
+hell_data.gd::GDScript::-1::1739686117::0::1::::HellData<>Resource<>::
+knowledge.gd::GDScript::-1::1739686400::0::1::::KnowledgeData<>Resource<>::
+marsh_data.gd::GDScript::-1::1739682771::0::1::::MarshData<>Resource<>::
+mountain_data.gd::GDScript::-1::1739735923::0::1::::MountainData<>Resource<>::
+::res://singleton/::1739742952
 game_over_menu.gd::GDScript::-1::1738443362::0::1::::<>CanvasLayer<>::
-game_over_menu.tscn::PackedScene::1134545519243997426::1738733846::0::1::::<><>::res://singleton/game_over_menu.gd<>uid://r5ttqaxnuvgk::::res://assets/MaldiniBold.ttf
-snake_segment.tscn::PackedScene::6320534672330157943::1739600927::0::1::::<><>::
+game_over_menu.tscn::PackedScene::1134545519243997426::1739742952::0::1::::<><>::res://singleton/game_over_menu.gd<>uid://r5ttqaxnuvgk::::res://assets/MaldiniBold.ttf
+snake_segment.tscn::PackedScene::6320534672330157943::1739742952::0::1::::<><>::

@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bslwqb0kf4t6s"]
 
-[ext_resource type="Script" path="res://over world/WurmGame/Desert/Desert.gd" id="1_6hvh8"]
+[ext_resource type="Script" path="res://over world/WurmGame/Desert/desert.gd" id="1_6hvh8"]
 [ext_resource type="PackedScene" uid="uid://cwbyjux1cdyr4" path="res://singleton/snake_segment.tscn" id="2_rj67y"]
 [ext_resource type="Texture2D" uid="uid://bj2ambwei5ogi" path="res://assets/bg.png" id="3_0ur64"]
 [ext_resource type="PackedScene" uid="uid://ujiwr3vh4tto" path="res://over world/ui/hud.tscn" id="4_a4ylm"]

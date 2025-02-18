@@ -1,4 +1,4 @@
-extends Resource #game_data.gd
+extends Resource
 class_name GameData
 
 # Wurm Games
@@ -14,9 +14,10 @@ class_name GameData
 	# Game
 @export var guap: float = 0.0
 	# Wurm
-@export var cinnamon: float = 0.0
-@export var peat: float = 0.0
-@export var bluepoppy: float = 0.0
-@export var anoxicpearls: float = 0.0
-@export var helelice: float = 0.0
-@export var tovwara: float = 0.0
+@export var cinnamon: float = 0.0		#Desert - Sand
+@export var peat: float = 0.0			#Marsh - Mud
+@export var bluepoppy: float = 0.0		#Mountain - Snow
+@export var anoxicpearls: float = 0.0	#Abyss - Kraken
+@export var helelice: float = 0.0		#Hell - Leviathan
+@export var tovwaraseeds: float = 0.0	#Heaven - Apocrapha
+@export var scientmotes: float = 0.0		#Knowledge - Book
