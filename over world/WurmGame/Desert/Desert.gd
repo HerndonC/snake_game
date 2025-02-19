@@ -1,8 +1,9 @@
 extends Node
 
 @export var snake_scene : PackedScene
-var mwm
+@onready var mwm = get_node("/root/MWM")
 var upgrade: DesertData
+const SAVE_PATH = "user://desert_data.tres"
 
 #game variables
 var score : int
@@ -33,9 +34,14 @@ var can_move : bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	mwm = get_node("/root/MWM")
-	#upgrade = mwm.game_data.desert_data
-	new_game()
+	if FileAccess.file_exists(SAVE_PATH):
+		upgrade = load(SAVE_PATH)
+	else:
+		upgrade = DesertData.new()
+		save_data()
+
+func save_data():
+	ResourceSaver.save(upgrade, SAVE_PATH)
 
 func new_game():
 	get_tree().paused = false
@@ -63,7 +69,6 @@ func add_segment(pos):
 	add_child(SnakeSegment)
 	snake.append(SnakeSegment)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	move_snake()
 	$Hud.get_node("MarginContainer/HBoxContainer/CurrencyLabel").text = "Cinnamon: " + str(mwm.game_data.cinnamon)
