@@ -8,3 +8,4 @@ res://over world/WurmGame/Desert/Desert.tscn
 res://singleton/snake_segment.tscn
 res://MWM/mwm.gd
 res://over world/WurmGame/Desert/desert.gd
+res://singleton/game_over_menu.gd
